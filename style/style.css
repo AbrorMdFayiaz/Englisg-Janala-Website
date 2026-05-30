@@ -1,0 +1,14 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+.tiro-bangla{
+  font-family: "Tiro Bangla", serif;
+}
+.siliguri{
+  font-family: "Hind Siliguri", sans-serif;
+}
+.active{
+    background-color: #422AD5;
+    color: #ffffff;
+}
+@import "tailwindcss"

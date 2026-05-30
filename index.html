@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tiro+Bangla:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Document</title>
+    <script src="./script/detailed_InfoButton.js"></script>
+    <script src="./script/importingLevelsFromAPI.js"></script>
+    <script src="./script/levelButtonClickingEffect.js"></script>
+    <script src="./script/loading.js"></script>
+    <script src="./script/searchFunctionality.js"></script>
+    <script src="./script/voiceAction.js"></script>
+</head>
+<body id="body">
+    <nav class="bg-[#badeff42] flex justify-between h-24 px-20">
+        <section class="flex ">
+            <h4 class="m-auto">English</h4>
+            <img src="./assets/logo.png" class="m-auto" alt="">
+            <h4 class="m-auto tiro-bangla">জানালা</h4>
+        </section>
+        <section class="my-auto space-x-4">
+            <button class="btn btn-outline btn-primary"><i class="fa-solid fa-circle-question"></i>FAQ</button>
+            <button class="btn btn-outline btn-primary"><i class="fa-solid fa-book-open"></i>Learn</button>
+            <button class="btn btn-outline btn-primary"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</button>
+        </section>
+    </nav>
+    <section class=" english  px-20 flex">
+        <div class=" pt-52">
+            <h1 class="text-5xl font-bold"><span class="text-info">English</span> is Easy!!</h1>
+            <p class="siliguri pt-6 pb-7">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
+            <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+
+              <input type="text" class="input" placeholder="Enter Your Name" />
+            
+              <input type="password" class="input" placeholder="" />
+            
+              <button class="btn btn-primary mt-4">Get Started</button>
+            </fieldset>
+        </div>
+<img src="./assets/hero-student.png" class=" mt-12 mb-20 mr-11" alt="">
+    </section>
+    <section class="let's px-20 mt-52  text-center">
+        <div class=" always-visible ">
+            <h2 class="font-bold text-4xl"><span class="text-info">Let's</span> Learn Vocabularies</h2>
+            <article id="level" class="mt-10 mb-9 space-x-5 flex justify-center">
+                <!--  here buttons will be imported from api using js -->
+            </article>
+        </div>
+            <span id="spinner" class="loading loading-dots loading-xl w-20 hidden"></span>
+        <article id="frequently-invisible">
+            <div id="NOT-selected-yet" class="bg-[#F8F8F8] rounded-3xl py-16">
+               <p class="siliguri text-[1rem] font-normal pb-3">আপনি এখনো কোন Lesson Select করেন নি</p>
+               <h3 class="font-medium text-4xl siliguri">একটি Lesson Select করুন।</h3>
+            </div>
+        </article>
+    </section>
+    <section class="Frequently px-20 rounded-2xl my-52">
+        <h3 class="font-bold text-4xl mb-20"><span class="text-info">Frequently</span> Asked Questions</h3>
+        <div class="space-y-5">
+            <article class="bg-[#F8F8F8] py-6 rounded-2xl px-5 space-y-3.5 ">
+                <h4 class="text-[1rem] font-medium leading-6">1. How can I start learning English on this website?</h4>
+                <h4 class="text-[1rem] font-normal leading-6 text-[#62748E]">You can start by exploring our beginner lessons, interactive exercises, and quizzes. We also offer structured courses to guide you step by step.</h4>
+            </article>
+            <article class="bg-[#F8F8F8] py-6 rounded-2xl px-5 space-y-3.5 ">
+                <h4 class="text-[1rem] font-medium leading-6">2. Is this website free to use?</h4>
+            </article>
+            <article class="bg-[#F8F8F8] py-6 rounded-2xl px-5 space-y-3.5 ">
+                <h4 class="text-[1rem] font-medium leading-6">3. Do I need to create an account?</h4>
+            </article>
+            <article class="bg-[#F8F8F8] py-6 rounded-2xl px-5 space-y-3.5 ">
+                <h4 class="text-[1rem] font-medium leading-6">4. How can I build my English vocabulary?</h4>
+            </article>
+            <article class="bg-[#F8F8F8] py-6 rounded-2xl px-5 space-y-3.5 ">
+                <h4 class="text-[1rem] font-medium leading-6">5. Do you offer certificates for completed courses?</h4>
+            </article>
+        </div>
+    </section>
+    <footer class="bg-[#badeff42] flex justify-between  px-20 py-24">
+        <section class="">
+            <div class="flex">
+                <h4 class="my-auto">English</h4>
+                <img src="./assets/logo.png" class="my-auto" alt="">
+                <h4 class="my-auto tiro-bangla">জানালা</h4>
+            </div>
+            <h5 class="font-medium text-[1.25rem] siliguri leading-7 text-[#546A7F] mt-5 mb-2">ইংরেজি শিখুন সহজে</h5>
+            <p class="leading-7 text-base font-normal text-[#546A7F]">Providing ED-Tech Applications since 2025</p>
+        </section>
+        <section class="mt-auto space-x-4">
+            <p>FOLLOW US</p>
+            <div>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-github"></i>
+            </div>
+        </section>
+    </footer>
+
+
+
+
+<label class="input">
+  <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <g
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      stroke-width="2.5"
+      fill="none"
+      stroke="currentColor"
+    >
+      <circle cx="11" cy="11" r="8"></circle>
+      <path d="m21 21-4.3-4.3"></path>
+    </g>
+  </svg>
+  <input type="search" required placeholder="Search" />
+</label>
+
+
+
+
+</body>
+</html>
